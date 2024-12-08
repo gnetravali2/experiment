@@ -1,0 +1,11 @@
+#!/bin/bash
+set -x
+echo "Hello friends"
+date
+whoami
+username=test1
+password=test123
+
+sudo useradd -m $username
+
+sudo echo -e "$password\n$password" | sudo passwd $username
